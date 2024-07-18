@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perros</title>
+
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #DDD;
+        }
+        tr:hover {background-color: #D6EEEE;}
+    </style>
+
+</head>
+<body>
+<h1>Lista de Perros</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Raza</th>
+        <th>Edad</th>
+        <th>Peso</th>
+        <th>Guarderia</th>
+        <th>Cuidador</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for item in items%}
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.nombre}}</td>
+        <td>{{item.raza}}</td>
+        <td>{{item.edad}}</td>
+        <td>{{item.peso}}</td>
+        <td></td>
+        <td></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<br>
+<br>
+<a href="{{ url_for('login') }}" >Login</a>
+</body>
+</html>
